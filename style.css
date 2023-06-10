@@ -25,18 +25,18 @@ body {
     background-image: var(--clr-background);
     color: white;
     margin: unset;
-    height: calc(100vh - 32px);
+    height: calc(100vh - 2rem);
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    border-radius: 5px;
+    border-radius: .3125em;
     border: 3px solid hsl(var(--clr-header-outline));
     width: 311px;
-    height: 96px;
+    height: 6rem;
     align-items: center;
-    margin: 32px auto;
+    margin: 2rem auto;
 }
 
 h1 {
@@ -49,7 +49,7 @@ h1 {
 
 #score {    
     width: 80px;
-    height: 72px;
+    height: 4.5rem;
     border-radius: 4px;
     background-color: white;
     color: var(--clr-blue-text);
@@ -85,7 +85,7 @@ h1 {
 
 button {
     border-radius: 50%;
-    width: 96px;
+    width: 6rem;
     aspect-ratio: 1/1;
     border-color: transparent;
     display: flex;
@@ -102,7 +102,7 @@ button>div {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: inset 0 5px hsla(var(--clr-header-outline), .25);
+    box-shadow: inset 0 .3125em hsla(var(--clr-header-outline), .25);
 }
 
 #gestures>button>div>svg { 
@@ -111,41 +111,41 @@ button>div {
 
 #rock {    
     position: absolute;
-    left: calc(50% + 70px);
+    left: calc(50% + 4.375em);
     top: calc(50% + 115px);
     transform: translate(-50%, -50%);
 }
 
 .rock {
     background-color: var(--clr-red);
-    box-shadow: 0 5px hsl(0, 0%, 0%, .25), 0 5px var(--clr-red-shadow);
+    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 0 .3125em var(--clr-red-shadow);
 }
 
 .rock-winner {
-    box-shadow: 0 5px hsl(0, 0%, 0%, .25), 
-    0 5px var(--clr-red-shadow), 
-    0 0 0 20px rgba(255, 255, 255, 8%), 
-    0 0 0 50px rgba(255, 255, 255, 4%), 
+    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 
+    0 .3125em var(--clr-red-shadow), 
+    0 0 0 1.25rem rgba(255, 255, 255, 8%), 
+    0 0 0 3.125em rgba(255, 255, 255, 4%), 
     0 0 0 85px rgba(255, 255, 255, 2%);
 }
 
 #paper {    
     position: absolute;
     left: calc(50% + 115px);
-    top: calc(50% - 20px);
+    top: calc(50% - 1.25rem);
     transform: translate(-50%, -50%);
 }
 
 .paper {
     background-color: var(--clr-blue);
-    box-shadow: 0 5px hsl(0, 0%, 0%, .25), 0 5px var(--clr-blue-shadow);
+    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 0 .3125em var(--clr-blue-shadow);
 }
 
 .paper-winner {
-    box-shadow: 0 5px hsl(0, 0%, 0%, .25), 
-    0 5px var(--clr-blue-shadow), 
-    0 0 0 20px rgba(255, 255, 255, 8%), 
-    0 0 0 50px rgba(255, 255, 255, 4%), 
+    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 
+    0 .3125em var(--clr-blue-shadow), 
+    0 0 0 1.25rem rgba(255, 255, 255, 8%), 
+    0 0 0 3.125em rgba(255, 255, 255, 4%), 
     0 0 0 85px rgba(255, 255, 255, 2%);
 }
 
@@ -158,54 +158,54 @@ button>div {
 
 .scissors {
     background-color: var(--clr-yellow);
-    box-shadow: 0 5px hsl(0, 0%, 0%, .25), 0 5px var(--clr-yellow-shadow);
+    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 0 .3125em var(--clr-yellow-shadow);
 }
 
 .scissors-winner {
-    box-shadow: 0 5px hsl(0, 0%, 0%, .25), 
-    0 5px var(--clr-yellow-shadow), 
-    0 0 0 20px rgba(255, 255, 255, 8%), 
-    0 0 0 50px rgba(255, 255, 255, 4%), 
+    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 
+    0 .3125em var(--clr-yellow-shadow), 
+    0 0 0 1.25rem rgba(255, 255, 255, 8%), 
+    0 0 0 3.125em rgba(255, 255, 255, 4%), 
     0 0 0 85px rgba(255, 255, 255, 2%);
 }
 
 #lizard {    
     position: absolute;
-    left: calc(50% - 70px);
+    left: calc(50% - 4.375em);
     top: calc(50% + 115px);
     transform: translate(-50%, -50%);
 }
 
 .lizard {
     background-color: var(--clr-purple);
-    box-shadow: 0 5px hsl(0, 0%, 0%, .25), 0 5px var(--clr-purple-shadow);
+    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 0 .3125em var(--clr-purple-shadow);
 }
 
 .lizard-winner {
-    box-shadow: 0 5px hsl(0, 0%, 0%, .25), 
-    0 5px var(--clr-purple-shadow), 
-    0 0 0 20px rgba(255, 255, 255, 8%), 
-    0 0 0 50px rgba(255, 255, 255, 4%), 
+    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 
+    0 .3125em var(--clr-purple-shadow), 
+    0 0 0 1.25rem rgba(255, 255, 255, 8%), 
+    0 0 0 3.125em rgba(255, 255, 255, 4%), 
     0 0 0 85px rgba(255, 255, 255, 2%);
 }
 
 #spock {    
     position: absolute;
     left: calc(50% - 115px);
-    top: calc(50% - 20px);
+    top: calc(50% - 1.25rem);
     transform: translate(-50%, -50%);
 }
 
 .spock {
     background-color: var(--clr-cyan);
-    box-shadow: 0 5px hsl(0, 0%, 0%, .25), 0 5px var(--clr-cyan-shadow);
+    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 0 .3125em var(--clr-cyan-shadow);
 }
 
 .spock-winner {
-    box-shadow: 0 5px hsl(0, 0%, 0%, .25), 
-    0 5px var(--clr-cyan-shadow), 
-    0 0 0 20px rgba(255, 255, 255, 8%), 
-    0 0 0 50px rgba(255, 255, 255, 4%), 
+    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 
+    0 .3125em var(--clr-cyan-shadow), 
+    0 0 0 1.25rem rgba(255, 255, 255, 8%), 
+    0 0 0 3.125em rgba(255, 255, 255, 4%), 
     0 0 0 85px rgba(255, 255, 255, 2%);
 }
 
@@ -252,7 +252,7 @@ button>div {
 h3 {
     text-transform: uppercase;
     font-size: 15px;
-    line-height: 32px;
+    line-height: 2rem;
     margin: unset;
 }
 
@@ -273,7 +273,7 @@ h3 {
 .play-again>button {
     width: 220px;
     height: 48px;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     margin-top: 1rem;
 }
 
@@ -304,9 +304,9 @@ h2 {
     color: var(--clr-dark-text);
     margin: unset;
     text-transform: uppercase;
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: var(--fw-bold);
-    line-height: 32px;
+    line-height: 2rem;
 }
 
 .close {
@@ -442,7 +442,7 @@ footer {
     #desktop-rules {
         width: 400px;
         height: 461px;
-        border-radius: 8px;
+        border-radius: 0.5rem;
         box-shadow: 0 4px 4px hsl(0, 0%, 0%, .25);
         background-color: white;
         position: absolute;
@@ -458,16 +458,16 @@ footer {
         align-items: center;
         justify-content: space-between;
         width: -webkit-fill-available;
-        padding: 32px 32px 20px;
+        padding: 2rem 2rem 1.25rem;
     }
 
     h2 {
         color: var(--clr-dark-text);
         margin: unset;
         text-transform: uppercase;
-        font-size: 32px;
+        font-size: 2rem;
         font-weight: var(--fw-bold);
-        line-height: 32px;
+        line-height: 2rem;
     }
 
     footer {
