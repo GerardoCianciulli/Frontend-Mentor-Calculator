@@ -31,9 +31,9 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    border-radius: .3125em;
-    border: 3px solid hsl(var(--clr-header-outline));
-    width: 311px;
+    border-radius: .3125rem;
+    border: .1875rem solid hsl(var(--clr-header-outline));
+    width: 19.4375rem;
     height: 6rem;
     align-items: center;
     margin: 2rem auto;
@@ -41,8 +41,8 @@ header {
 
 h1 {
     width: min-content;
-    font-size: 11px;
-    line-height: 9.6px;
+    font-size: .6875rem;
+    line-height: .6rem;
     margin-left: 1.5rem;
     text-transform: uppercase;
 }
@@ -50,7 +50,7 @@ h1 {
 #score {    
     width: 80px;
     height: 4.5rem;
-    border-radius: 4px;
+    border-radius: .25rem;
     background-color: white;
     color: var(--clr-blue-text);
     margin-right: 14px;
@@ -62,14 +62,14 @@ h1 {
 #score>p { 
     width: min-content;
     text-align: center;
-    font-size: 10px;
+    font-size: .625rem;
     text-transform: uppercase;
     font-weight: var(--fw-semi-bold);
 }
 
 #score>p>span { 
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
     color: var(--clr-dark-text);
     font-weight: var(--fw-bold);
 }
@@ -95,14 +95,14 @@ button {
 }
 
 button>div { 
-    width: 74px;
+    width: 4.625rem;
     aspect-ratio: 1/1;
     background-color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: inset 0 .3125em hsla(var(--clr-header-outline), .25);
+    box-shadow: inset 0 .3125rem hsla(var(--clr-header-outline), .25);
 }
 
 #gestures>button>div>svg { 
@@ -111,113 +111,113 @@ button>div {
 
 #rock {    
     position: absolute;
-    left: calc(50% + 4.375em);
-    top: calc(50% + 115px);
+    left: calc(50% + 4.375rem);
+    top: calc(50% + 7.1875rem);
     transform: translate(-50%, -50%);
 }
 
 .rock {
     background-color: var(--clr-red);
-    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 0 .3125em var(--clr-red-shadow);
+    box-shadow: 0 .3125rem hsl(0, 0%, 0%, .25), 0 .3125rem var(--clr-red-shadow);
 }
 
 .rock-winner {
-    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 
-    0 .3125em var(--clr-red-shadow), 
+    box-shadow: 0 .3125rem hsl(0, 0%, 0%, .25), 
+    0 .3125rem var(--clr-red-shadow), 
     0 0 0 1.25rem rgba(255, 255, 255, 8%), 
-    0 0 0 3.125em rgba(255, 255, 255, 4%), 
-    0 0 0 85px rgba(255, 255, 255, 2%);
+    0 0 0 3.125rem rgba(255, 255, 255, 4%), 
+    0 0 0 5.3125rem rgba(255, 255, 255, 2%);
 }
 
 #paper {    
     position: absolute;
-    left: calc(50% + 115px);
+    left: calc(50% + 7.1875rem);
     top: calc(50% - 1.25rem);
     transform: translate(-50%, -50%);
 }
 
 .paper {
     background-color: var(--clr-blue);
-    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 0 .3125em var(--clr-blue-shadow);
+    box-shadow: 0 .3125rem hsl(0, 0%, 0%, .25), 0 .3125rem var(--clr-blue-shadow);
 }
 
 .paper-winner {
-    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 
-    0 .3125em var(--clr-blue-shadow), 
+    box-shadow: 0 .3125rem hsl(0, 0%, 0%, .25), 
+    0 .3125rem var(--clr-blue-shadow), 
     0 0 0 1.25rem rgba(255, 255, 255, 8%), 
-    0 0 0 3.125em rgba(255, 255, 255, 4%), 
-    0 0 0 85px rgba(255, 255, 255, 2%);
+    0 0 0 3.125rem rgba(255, 255, 255, 4%), 
+    0 0 0 5.3125rem rgba(255, 255, 255, 2%);
 }
 
 #scissors {    
     position: absolute;
     left: 50%;
-    top: calc(50% - 115px);
+    top: calc(50% - 7.1875rem);
     transform: translate(-50%, -50%);
 }
 
 .scissors {
     background-color: var(--clr-yellow);
-    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 0 .3125em var(--clr-yellow-shadow);
+    box-shadow: 0 .3125rem hsl(0, 0%, 0%, .25), 0 .3125rem var(--clr-yellow-shadow);
 }
 
 .scissors-winner {
-    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 
-    0 .3125em var(--clr-yellow-shadow), 
+    box-shadow: 0 .3125rem hsl(0, 0%, 0%, .25), 
+    0 .3125rem var(--clr-yellow-shadow), 
     0 0 0 1.25rem rgba(255, 255, 255, 8%), 
-    0 0 0 3.125em rgba(255, 255, 255, 4%), 
-    0 0 0 85px rgba(255, 255, 255, 2%);
+    0 0 0 3.125rem rgba(255, 255, 255, 4%), 
+    0 0 0 5.3125rem rgba(255, 255, 255, 2%);
 }
 
 #lizard {    
     position: absolute;
-    left: calc(50% - 4.375em);
-    top: calc(50% + 115px);
+    left: calc(50% - 4.375rem);
+    top: calc(50% + 7.1875rem);
     transform: translate(-50%, -50%);
 }
 
 .lizard {
     background-color: var(--clr-purple);
-    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 0 .3125em var(--clr-purple-shadow);
+    box-shadow: 0 .3125rem hsl(0, 0%, 0%, .25), 0 .3125rem var(--clr-purple-shadow);
 }
 
 .lizard-winner {
-    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 
-    0 .3125em var(--clr-purple-shadow), 
+    box-shadow: 0 .3125rem hsl(0, 0%, 0%, .25), 
+    0 .3125rem var(--clr-purple-shadow), 
     0 0 0 1.25rem rgba(255, 255, 255, 8%), 
-    0 0 0 3.125em rgba(255, 255, 255, 4%), 
-    0 0 0 85px rgba(255, 255, 255, 2%);
+    0 0 0 3.125rem rgba(255, 255, 255, 4%), 
+    0 0 0 5.3125rem rgba(255, 255, 255, 2%);
 }
 
 #spock {    
     position: absolute;
-    left: calc(50% - 115px);
+    left: calc(50% - 7.1875rem);
     top: calc(50% - 1.25rem);
     transform: translate(-50%, -50%);
 }
 
 .spock {
     background-color: var(--clr-cyan);
-    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 0 .3125em var(--clr-cyan-shadow);
+    box-shadow: 0 .3125rem hsl(0, 0%, 0%, .25), 0 .3125rem var(--clr-cyan-shadow);
 }
 
 .spock-winner {
-    box-shadow: 0 .3125em hsl(0, 0%, 0%, .25), 
-    0 .3125em var(--clr-cyan-shadow), 
+    box-shadow: 0 .3125rem hsl(0, 0%, 0%, .25), 
+    0 .3125rem var(--clr-cyan-shadow), 
     0 0 0 1.25rem rgba(255, 255, 255, 8%), 
-    0 0 0 3.125em rgba(255, 255, 255, 4%), 
-    0 0 0 85px rgba(255, 255, 255, 2%);
+    0 0 0 3.125rem rgba(255, 255, 255, 4%), 
+    0 0 0 5.3125rem rgba(255, 255, 255, 2%);
 }
 
 #mobile-results {
     width: calc(100% - 46px);
-    height: 375px;
+    height: 23.4375rem;
     flex-direction: column;
-    margin: 100px auto 0;
+    margin: 6.25rem auto 0;
 }
 
 #mobile-results>div:first-child {
-    height: 182px;
+    height: 11.375rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -228,11 +228,11 @@ button>div {
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    width: 145px;
+    width: 9rem;
 }
 
 .player>button, .house>button {
-    width: 130px;
+    width: 8.125rem;
     cursor: unset;
 }
 
@@ -241,12 +241,12 @@ button>div {
     aspect-ratio: 1 / 1;
     background-color: var(--clr-dark-text);
     border-radius: 50%;
-    margin: 10px;
+    margin: .625rem;
     cursor: unset;
 }
 
 .player>button>div, .house>button>div {
-    width: 100px;
+    width: 6.25rem;
 }
 
 h3 {
@@ -259,20 +259,20 @@ h3 {
 .play-again {
     margin: auto;
     flex-direction: column;
-    margin-top: 62px;
+    margin-top: 3.875rem;
     align-items: center;
 }
 
 .play-again>p {
     margin: unset;
-    font-size: 56px;
+    font-size: 3.5rem;
     text-transform: uppercase;
     font-weight: var(--fw-bold);
 }
 
 .play-again>button {
-    width: 220px;
-    height: 48px;
+    width: 13.75rem;
+    height: 3rem;
     border-radius: 0.5rem;
     margin-top: 1rem;
 }
@@ -316,7 +316,7 @@ h2 {
 footer {
     display: flex;
     position: absolute;
-    bottom: 56px;
+    bottom: 3.5rem;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -324,7 +324,7 @@ footer {
 #rules-btn {    
     border-radius: 0.5rem;
     width: 128px;
-    height: 40px;
+    height: 2.5rem;
     color: white;
     border: 1px solid white;
     background-color: transparent;
@@ -370,7 +370,7 @@ footer {
 
     #gestures {
         position: absolute;
-        top: calc(50% + 100px);
+        top: calc(50% + 6.25rem);
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -393,7 +393,7 @@ footer {
     }
 */
     #rock {    
-        left: calc(50% + 100px);
+        left: calc(50% + 6.25rem);
         top: calc(50% + 175px);
     }
     
@@ -407,7 +407,7 @@ footer {
     
     #lizard {    
         top: calc(50% + 175px);
-        left: calc(50% - 100px);
+        left: calc(50% - 6.25rem);
     }
     
     #spock {    
@@ -418,16 +418,16 @@ footer {
         height: 395px;
         width: 100%;
         justify-content: space-evenly;
-        margin-top: 40px;
+        margin-top: 2.5rem;
         position: absolute;
     }
 
     h3 {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     .player, .house {
-        width: 294px;
+        width: 18.375rem;
     }
 
     .player>button, .house>button {
@@ -440,10 +440,10 @@ footer {
     }
 
     #desktop-rules {
-        width: 400px;
-        height: 461px;
+        width: 25rem;
+        height: 28.8125rem;
         border-radius: 0.5rem;
-        box-shadow: 0 4px 4px hsl(0, 0%, 0%, .25);
+        box-shadow: 0 .25rem .25rem hsl(0, 0%, 0%, .25);
         background-color: white;
         position: absolute;
         transform: translate(-50%, -50%);
