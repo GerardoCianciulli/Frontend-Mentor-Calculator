@@ -124,9 +124,9 @@ button>div {
 .rock-winner {
     box-shadow: 0 5px hsl(0, 0%, 0%, .25), 
     0 5px var(--clr-red-shadow), 
-    0 0 0 20px rgba(255, 255, 255, 10%), 
-    0 0 0 50px rgba(255, 255, 255, 6%), 
-    0 0 0 85px rgba(255, 255, 255, 3%);
+    0 0 0 20px rgba(255, 255, 255, 8%), 
+    0 0 0 50px rgba(255, 255, 255, 4%), 
+    0 0 0 85px rgba(255, 255, 255, 2%);
 }
 
 #paper {    
@@ -144,9 +144,9 @@ button>div {
 .paper-winner {
     box-shadow: 0 5px hsl(0, 0%, 0%, .25), 
     0 5px var(--clr-blue-shadow), 
-    0 0 0 20px rgba(255, 255, 255, 10%), 
-    0 0 0 50px rgba(255, 255, 255, 6%), 
-    0 0 0 85px rgba(255, 255, 255, 3%);
+    0 0 0 20px rgba(255, 255, 255, 8%), 
+    0 0 0 50px rgba(255, 255, 255, 4%), 
+    0 0 0 85px rgba(255, 255, 255, 2%);
 }
 
 #scissors {    
@@ -164,9 +164,9 @@ button>div {
 .scissors-winner {
     box-shadow: 0 5px hsl(0, 0%, 0%, .25), 
     0 5px var(--clr-yellow-shadow), 
-    0 0 0 20px rgba(255, 255, 255, 10%), 
-    0 0 0 50px rgba(255, 255, 255, 6%), 
-    0 0 0 85px rgba(255, 255, 255, 3%);
+    0 0 0 20px rgba(255, 255, 255, 8%), 
+    0 0 0 50px rgba(255, 255, 255, 4%), 
+    0 0 0 85px rgba(255, 255, 255, 2%);
 }
 
 #lizard {    
@@ -184,9 +184,9 @@ button>div {
 .lizard-winner {
     box-shadow: 0 5px hsl(0, 0%, 0%, .25), 
     0 5px var(--clr-purple-shadow), 
-    0 0 0 20px rgba(255, 255, 255, 10%), 
-    0 0 0 50px rgba(255, 255, 255, 6%), 
-    0 0 0 85px rgba(255, 255, 255, 3%);
+    0 0 0 20px rgba(255, 255, 255, 8%), 
+    0 0 0 50px rgba(255, 255, 255, 4%), 
+    0 0 0 85px rgba(255, 255, 255, 2%);
 }
 
 #spock {    
@@ -204,17 +204,39 @@ button>div {
 .spock-winner {
     box-shadow: 0 5px hsl(0, 0%, 0%, .25), 
     0 5px var(--clr-cyan-shadow), 
-    0 0 0 20px rgba(255, 255, 255, 10%), 
-    0 0 0 50px rgba(255, 255, 255, 6%), 
-    0 0 0 85px rgba(255, 255, 255, 3%);
+    0 0 0 20px rgba(255, 255, 255, 8%), 
+    0 0 0 50px rgba(255, 255, 255, 4%), 
+    0 0 0 85px rgba(255, 255, 255, 2%);
 }
 
-#player>button, #house>button {
+#mobile-results {
+    width: calc(100% - 46px);
+    height: 375px;
+    flex-direction: column;
+    margin: 100px auto 0;
+}
+
+#mobile-results>div:first-child {
+    height: 182px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.player, .house {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 145px;
+}
+
+.player>button, .house>button {
     width: 130px;
     cursor: unset;
 }
 
-#house>.button-preview {
+.house>.button-preview {
     width: 110px;
     aspect-ratio: 1 / 1;
     background-color: var(--clr-dark-text);
@@ -223,7 +245,7 @@ button>div {
     cursor: unset;
 }
 
-#player>button>div, #house>button>div {
+.player>button>div, .house>button>div {
     width: 100px;
 }
 
@@ -232,6 +254,27 @@ h3 {
     font-size: 15px;
     line-height: 32px;
     margin: unset;
+}
+
+.play-again {
+    margin: auto;
+    flex-direction: column;
+    margin-top: 62px;
+    align-items: center;
+}
+
+.play-again>p {
+    margin: unset;
+    font-size: 56px;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+}
+
+.play-again>button {
+    width: 220px;
+    height: 48px;
+    border-radius: 8px;
+    margin-top: 1rem;
 }
 
 #mobile-rules {
@@ -371,7 +414,7 @@ footer {
         left: calc(50% - 150px);
     } 
 
-    #player>button, #house>button {
+    .player>button, .house>button {
         transform: scale(2.3);
     }
     

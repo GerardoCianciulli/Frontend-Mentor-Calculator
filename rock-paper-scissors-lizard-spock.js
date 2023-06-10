@@ -28,12 +28,8 @@ $(document).ready(function(){
     });
 
     $("#rules-btn").click(function(){
-        if(window.innerWidth < 725) {
-            $("#mobile-rules").removeClass("hide").addClass("show-flex");
-        }
-        else{
-            $("#desktop-rules").removeClass("hide").addClass("show-flex");
-        }
+        var selectorByID = window.innerWidth < 725 ? "#mobile-rules" : "#desktop-rules";
+        $(selectorByID).removeClass("hide").addClass("show-flex");
     });
 
     $(".close").click(function(e){
@@ -41,40 +37,42 @@ $(document).ready(function(){
         $("#" + selectorByID).addClass("hide").removeClass("show-flex")
     });
 
-    $("#play-again>button").click(function(){
-        $("#player>button").removeAttr("class");
-        $("#player>button>div").empty();
-        $("#house>button").removeAttr("class").addClass("button-preview");
-        $("#house>button").empty();
+    $(".play-again>button").click(function(){
+        var selectorByID = window.innerWidth < 725 ? "#mobile-results" : "#desktop-results";
+        $(".player>button").removeAttr("class");
+        $(".player>button>div").empty();
+        $(".house>button").removeAttr("class").addClass("button-preview");
+        $(".house>button").empty();
         $("#gestures").show();
-        $("#results").addClass("hide").removeClass("show-flex");
-        $("#play-again").addClass("hide").removeClass("show-flex");
+        $(selectorByID).addClass("hide").removeClass("show-flex");
+        $(".play-again").addClass("hide").removeClass("show-flex");
     });
 
     $("#gestures button").click(function(e){
-        var computerSelection = Math.round(Math.random() * Date.now() % 4) // returns a random value between 0 - 4
-
+        var computerSelection = (Math.round(Math.random() * 100)) % 5,
+            selectorByID = window.innerWidth < 725 ? "#mobile-results" : "#desktop-results";
+        
         $("#gestures").hide();
-        $("#results").removeClass("hide").addClass("show-flex");
-        $("#player>button").addClass(e.currentTarget.id);
-        $("#player>button>div").append(RULES[e.currentTarget.id].svg)
+        $(selectorByID).removeClass("hide").addClass("show-flex");
+        $(".player>button").addClass(e.currentTarget.id);
+        $(".player>button>div").append(RULES[e.currentTarget.id].svg)
 
         setTimeout(function(){
             $(".button-preview").removeClass("button-preview").addClass("button " + Object.keys(RULES)[computerSelection]);
-            $("#house>button").append("<div>" + Object.values(RULES)[computerSelection].svg + "</div>")
+            $(".house>button").append("<div>" + Object.values(RULES)[computerSelection].svg + "</div>")
             
             setTimeout(function(){
-                $("#play-again").removeClass("hide").addClass("show-flex");
+                $(".play-again").removeClass("hide").addClass("show-flex");
 
                 if (RULES[e.currentTarget.id].beats.includes(Object.keys(RULES)[computerSelection])) {
-                    $("#player>button").addClass(e.currentTarget.id + "-winner");
+                    $(".player>button").addClass(e.currentTarget.id + "-winner");
                     score ++;
-                    $("#play-again p").text("You win");
+                    $(".play-again p").text("You win");
                     $("#score span").text(score);
                 } 
                 else {
-                    $("#house>button").addClass(Object.keys(RULES)[computerSelection] + "-winner");
-                    $("#play-again p").text("You lose");
+                    $(".house>button").addClass(Object.keys(RULES)[computerSelection] + "-winner");
+                    $(".play-again p").text("You lose");
                 }
             }, 500);
             
@@ -83,6 +81,6 @@ $(document).ready(function(){
 
     window.addEventListener("resize", function(){ // When resizing the window restart game sequence
         $(".close").trigger("click")
-        $("#play-again>button").trigger("click")
+        $(".play-again>button").trigger("click")
     });
 });

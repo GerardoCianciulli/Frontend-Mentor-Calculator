@@ -25,61 +25,25 @@
     <svg id="pentagon" xmlns="http://www.w3.org/2000/svg" width="329" height="313" viewBox="0 0 329 313"><path fill="none" stroke="#000" stroke-width="15" d="M164.5 9.27L9.26 122.06l59.296 182.495h191.888L319.74 122.06 164.5 9.271z" opacity=".2"/></svg>
   </div>
 
-  <div id="results" class="hide" style="
-  width: calc(100% - 46px);
-  height: 375px;
-  flex-direction: column;
-  margin: 100px auto 0;
-">
-<div style="
-height: 182px;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-">
-<div id="player" style="
-display: flex;
-align-items: center;
-justify-content: space-between;
-flex-direction: column;
-width: 145px;
-">
-  <button>
-<div></div>
-</button>
-  <h3>You picked</h3>
-</div>
-<div id="house" style="
-display: flex;
-align-items: center;
-justify-content: space-between;
-flex-direction: column;
-width: 145px;
-">
-  <button class="button-preview"></button>
-  <h3> The house picked</h3>
-</div>
-</div>
-<div id="play-again" class="hide" style="
-margin: auto;
-flex-direction: column;
-margin-top: 62px;
-align-items: center;
-">
-<p style="
-margin: unset;
-font-size: 56px;
-text-transform: uppercase;
-font-weight: var(--fw-bold);
-">You lose</p>
-<button style="
-width: 220px;
-height: 48px;
-border-radius: 8px;
-margin-top: 1rem;
-">Play again</button>
+  <div id="mobile-results" class="hide">
+    <div>
+      <div class="player">
+        <button>
+          <div></div>
+        </button>
+        <h3>You picked</h3>
+      </div>
+      <div class="house">
+        <button class="button-preview"></button>
+        <h3> The house picked</h3>
+      </div>
+    </div>
+    <div class="play-again hide">
+      <p>You lose</p>
+      <button>Play again</button>
     </div>
   </div>
+
   <div id="mobile-rules" class="hide">
     <div>
       <h2>Rules</h2>
