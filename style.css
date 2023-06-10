@@ -414,23 +414,51 @@ footer {
         left: calc(50% - 150px);
     } 
 
+    #desktop-results {
+        height: 395px;
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 40px;
+        position: absolute;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .player, .house {
+        width: 294px;
+    }
+
     .player>button, .house>button {
         transform: scale(2.3);
+        transform-origin: bottom;
     }
     
+    .play-again {
+        margin: auto 0;
+    }
+
     #desktop-rules {
         width: 400px;
         height: 461px;
         border-radius: 8px;
         box-shadow: 0 4px 4px hsl(0, 0%, 0%, .25);
+        background-color: white;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        flex-direction: column;
+        align-items: center;
     }
     
-    #dekstop-rules>div {
-        padding: 32px 32px 16px;
-        width: calc(100% - 64px);
-        flex-direction: row;
-        align-items: unset;
-        height: min-content;
+    #desktop-rules>div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: -webkit-fill-available;
+        padding: 32px 32px 20px;
     }
 
     h2 {
