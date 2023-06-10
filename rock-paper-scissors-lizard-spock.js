@@ -28,11 +28,17 @@ $(document).ready(function(){
     });
 
     $("#rules-btn").click(function(){
-        $("#rules").removeClass("hide").addClass("show-flex")
+        if(window.innerWidth < 725) {
+            $("#mobile-rules").removeClass("hide").addClass("show-flex");
+        }
+        else{
+            $("#desktop-rules").removeClass("hide").addClass("show-flex");
+        }
     });
 
-    $("#rules .close").click(function(){
-        $("#rules").addClass("hide").removeClass("show-flex")
+    $(".close").click(function(e){
+        var selectorByID = $(e.currentTarget).parent().parent().attr("id");
+        $("#" + selectorByID).addClass("hide").removeClass("show-flex")
     });
 
     $("#play-again>button").click(function(){
@@ -73,10 +79,10 @@ $(document).ready(function(){
             }, 500);
             
         }, 250);
-        //show user selection
-        //add a delay
-        //show computer's selection 
-        
-        
-    })
+    });
+
+    window.addEventListener("resize", function(){ // When resizing the window restart game sequence
+        $(".close").trigger("click")
+        $("#play-again>button").trigger("click")
+    });
 });
