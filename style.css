@@ -48,12 +48,12 @@ h1 {
 }
 
 #score {    
-    width: 80px;
+    width: 5rem;
     height: 4.5rem;
     border-radius: .25rem;
     background-color: white;
     color: var(--clr-blue-text);
-    margin-right: 14px;
+    margin-right: .875rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,7 +80,7 @@ h1 {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 227px;
+    width: 14.1875rem;
 }
 
 button {
@@ -210,7 +210,7 @@ button>div {
 }
 
 #mobile-results {
-    width: calc(100% - 46px);
+    width: calc(100% - 2.875rem);
     height: 23.4375rem;
     flex-direction: column;
     margin: 6.25rem auto 0;
@@ -237,7 +237,7 @@ button>div {
 }
 
 .house>.button-preview {
-    width: 110px;
+    width: 6.875rem;
     aspect-ratio: 1 / 1;
     background-color: var(--clr-dark-text);
     border-radius: 50%;
@@ -251,7 +251,7 @@ button>div {
 
 h3 {
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: .9375rem;
     line-height: 2rem;
     margin: unset;
 }
@@ -297,7 +297,7 @@ h3 {
     flex-direction: column;
     height: 100%;
     align-items: center;
-    padding: 95px 0 65px;
+    padding: 5.9375rem 0 4.0625rem;
 }
 
 h2 {
@@ -323,13 +323,13 @@ footer {
 
 #rules-btn {    
     border-radius: 0.5rem;
-    width: 128px;
+    width: 8rem;
     height: 2.5rem;
     color: white;
-    border: 1px solid white;
+    border: .0625rem solid white;
     background-color: transparent;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--fw-semi-bold);
 }
 
@@ -343,19 +343,19 @@ footer {
 
 @media (min-width: 725px) {
     header{
-        width: 700px;
-        height: 150px;
+        width: 43.75rem;
+        height: 9.375rem;
     }
 
     h1{
-        font-size: 28px;
-        line-height: 22px;
+        font-size: 1.75rem;
+        line-height: 1.375rem;
         margin-left: 2rem;
     }
 
     #score {
-        width: 150px;
-        height: 114px;
+        width: 9.375rem;
+        height:  7.125rem;
         margin-right: 1.5rem;
     }
 
@@ -364,8 +364,8 @@ footer {
     }
 
     #score>p>span {
-        font-size: 64px;
-        line-height: 64px;
+        font-size: 4rem;
+        line-height: 4rem;
     }
 
     #gestures {
@@ -376,7 +376,7 @@ footer {
     }
 
     #pentagon {
-        width: 345px;
+        width: 21.5625rem;
     }
 
     #gestures>button {
@@ -384,38 +384,30 @@ footer {
         transform: scale(1.5) translate(-50%, -50%);
     }
 
-    /* button>div {
-        width: 112px;
-    }
-
-    button>div>svg {
-        transform: unset;
-    }
-*/
     #rock {    
         left: calc(50% + 6.25rem);
-        top: calc(50% + 175px);
+        top: calc(50% + 10.9375rem);
     }
     
     #paper {    
-        left: calc(50% + 150px);
+        left: calc(50% + 9.375rem);
     }
     
     #scissors {    
-        top: calc(50% - 150px);
+        top: calc(50% - 9.375rem);
     }
     
     #lizard {    
-        top: calc(50% + 175px);
+        top: calc(50% + 10.9375rem);
         left: calc(50% - 6.25rem);
     }
     
     #spock {    
-        left: calc(50% - 150px);
+        left: calc(50% - 9.375rem);
     } 
 
     #desktop-results {
-        height: 395px;
+        height: 24.6875rem;
         width: 100%;
         justify-content: space-evenly;
         margin-top: 2.5rem;
