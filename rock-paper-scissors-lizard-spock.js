@@ -24,7 +24,7 @@ const RULES = {
 $(document).ready(function(){
     var score = 0;
     Object.keys(RULES).forEach(function(value){
-        $("#gestures").append("<button id='" + value + "' class='" + value + "'><div>" + RULES[value].svg + "</div></button>")
+        $("#gestures").append("<div id='" + value + "' class='button " + value + "'><div>" + RULES[value].svg + "</div></div>")
     });
 
     $("#rules-btn").click(function(){
@@ -48,7 +48,7 @@ $(document).ready(function(){
         $(".play-again").addClass("hide").removeClass("show-flex");
     });
 
-    $("#gestures button").click(function(e){
+    $("#gestures>.button").click(function(e){
         var computerSelection = (Math.round(Math.random() * 100)) % 5,
             selectorByID = window.innerWidth < 725 ? "#mobile-results" : "#desktop-results";
         
