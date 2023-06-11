@@ -39,10 +39,10 @@ $(document).ready(function(){
 
     $(".play-again>button").click(function(){
         var selectorByID = window.innerWidth < 725 ? "#mobile-results" : "#desktop-results";
-        $(".player>button").removeAttr("class");
-        $(".player>button>div").empty();
-        $(".house>button").removeAttr("class").addClass("button-preview");
-        $(".house>button").empty();
+        $(".player>.button").removeAttr("class").addClass("button");
+        $(".player>.button>div").empty();
+        $(".house>.button").removeAttr("class").addClass("button button-preview");
+        $(".house>.button").empty();
         $("#gestures").show();
         $(selectorByID).addClass("hide").removeClass("show-flex");
         $(".play-again").addClass("hide").removeClass("show-flex");
@@ -54,24 +54,24 @@ $(document).ready(function(){
         
         $("#gestures").hide();
         $(selectorByID).removeClass("hide").addClass("show-flex");
-        $(".player>button").addClass(e.currentTarget.id);
-        $(".player>button>div").append(RULES[e.currentTarget.id].svg)
+        $(".player>.button").addClass(e.currentTarget.id);
+        $(".player>.button>div").append(RULES[e.currentTarget.id].svg)
 
         setTimeout(function(){
             $(".button-preview").removeClass("button-preview").addClass("button " + Object.keys(RULES)[computerSelection]);
-            $(".house>button").append("<div>" + Object.values(RULES)[computerSelection].svg + "</div>")
+            $(".house>.button").append("<div>" + Object.values(RULES)[computerSelection].svg + "</div>")
             
             setTimeout(function(){
                 $(".play-again").removeClass("hide").addClass("show-flex");
 
                 if (RULES[e.currentTarget.id].beats.includes(Object.keys(RULES)[computerSelection])) {
-                    $(".player>button").addClass(e.currentTarget.id + "-winner");
+                    $(".player>.button").addClass(e.currentTarget.id + "-winner");
                     score ++;
                     $(".play-again p").text("You win");
                     $("#score span").text(score);
                 } 
                 else {
-                    $(".house>button").addClass(Object.keys(RULES)[computerSelection] + "-winner");
+                    $(".house>.button").addClass(Object.keys(RULES)[computerSelection] + "-winner");
                     $(".play-again p").text("You lose");
                 }
             }, 500);

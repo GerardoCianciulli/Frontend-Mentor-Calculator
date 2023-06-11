@@ -83,7 +83,7 @@ h1 {
     width: 14.1875rem;
 }
 
-button, .button {
+.button {
     border-radius: 50%;
     width: 6rem;
     aspect-ratio: 1/1;
@@ -94,7 +94,7 @@ button, .button {
     cursor: pointer;
 }
 
-button>div, .button>div {
+.button>div {
     width: 4.625rem;
     aspect-ratio: 1/1;
     background-color: white;
@@ -231,7 +231,7 @@ button>div, .button>div {
     width: 9rem;
 }
 
-.player>button, .house>button {
+.player>.button, .house>.button {
     width: 8.125rem;
     cursor: unset;
 }
@@ -245,7 +245,7 @@ button>div, .button>div {
     cursor: unset;
 }
 
-.player>button>div, .house>button>div {
+.player>.button>div, .house>.button>div {
     width: 6.25rem;
 }
 
@@ -275,6 +275,30 @@ h3 {
     height: 3rem;
     border-radius: 0.5rem;
     margin-top: 1rem;
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+button {
+    cursor: pointer;
+}
+
+#rules-btn {    
+    border-radius: 0.5rem;
+    width: 8rem;
+    height: 2.5rem;
+    color: white;
+    border: .0625rem solid white;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: var(--fw-semi-bold);
 }
 
 #mobile-rules {
@@ -311,26 +335,6 @@ h2 {
 
 .close {
     display: contents;
-}
-
-footer {
-    display: flex;
-    position: absolute;
-    bottom: 3.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#rules-btn {    
-    border-radius: 0.5rem;
-    width: 8rem;
-    height: 2.5rem;
-    color: white;
-    border: .0625rem solid white;
-    background-color: transparent;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: var(--fw-semi-bold);
 }
 
 .hide {
@@ -422,7 +426,7 @@ footer {
         width: 18.375rem;
     }
 
-    .player>button, .house>button {
+    .player>.button, .house>.button {
         transform: scale(2.3);
         transform-origin: bottom;
     }
