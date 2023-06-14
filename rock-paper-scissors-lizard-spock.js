@@ -68,12 +68,13 @@ $(document).ready(function(){
                     $(".player>.button").addClass(e.currentTarget.id + "-winner");
                     score ++;
                     $(".play-again p").text("You win");
-                    $("#score span").text(score);
                 } 
                 else {
                     $(".house>.button").addClass(Object.keys(RULES)[computerSelection] + "-winner");
+                    score = score > 0 ? score -1 : score;
                     $(".play-again p").text("You lose");
                 }
+                $("#score span").text(score);
             }, 500);
             
         }, 250);
