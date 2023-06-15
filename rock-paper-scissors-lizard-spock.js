@@ -23,6 +23,15 @@ const RULES = {
 
 $(document).ready(function(){
     var score = 0;
+    // Check browser support
+    if (typeof(Storage) !== "undefined") {
+        // Retrieve
+        score = localStorage.getItem("rock-paper-scissors");
+        $("#score span").text(score);
+    } else {
+        console.log("Sorry, your browser does not support Web Storage...");
+    }
+
     Object.keys(RULES).forEach(function(value){
         $("#gestures").append("<div id='" + value + "' class='button " + value + "'><div>" + RULES[value].svg + "</div></div>")
     });
@@ -75,6 +84,8 @@ $(document).ready(function(){
                     $(".play-again p").text("You lose");
                 }
                 $("#score span").text(score);
+                // Store into HTML Web local storage
+                localStorage.setItem("rock-paper-scissors", score);
             }, 500);
             
         }, 250);
