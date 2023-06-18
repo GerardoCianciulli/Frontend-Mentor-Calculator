@@ -26,7 +26,8 @@ $(document).ready(function(){
     // Check browser support
     if (typeof(Storage) !== "undefined") {
         // Retrieve
-        score = localStorage.getItem("rock-paper-scissors");
+        var temp = localStorage.getItem("rock-paper-scissors");
+        score = typeof temp == "number" ? temp : score;
         $("#score span").text(score);
     } else {
         console.log("Sorry, your browser does not support Web Storage...");
